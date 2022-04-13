@@ -4,6 +4,7 @@ module.exports = {
         loader: 'custom',
         path: '',
         disableStaticImages: true,
+        dangerouslyAllowSVG: true,
     },
     basePath: '/Project-WDM-v1',
     assetPrefix: '/',
