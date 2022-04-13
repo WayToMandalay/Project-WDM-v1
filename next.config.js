@@ -7,5 +7,5 @@ module.exports = {
         dangerouslyAllowSVG: true,
     },
     basePath: '/Project-WDM-v1',
-    assetPrefix: '/',
+    assetPrefix: '/Project-WDM-v1',
 }
