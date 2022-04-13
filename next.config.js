@@ -5,6 +5,6 @@ module.exports = {
         path: '',
         disableStaticImages: true,
     },
-    basePath: '',
+    basePath: '/Project-WDM-v1',
     assetPrefix: '',
 }
