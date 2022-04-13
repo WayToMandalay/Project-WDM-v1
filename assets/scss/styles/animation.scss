@@ -1,0 +1,114 @@
+@keyframes animDecor-1 {
+  0% {
+    transform: perspective(20px) translateZ(0px);
+
+  }
+  50% {
+    transform: perspective(40px) translateZ(10px)
+  }
+  100% {
+    transform: perspective(20px) translateZ(0px)
+  }
+}
+
+@keyframes animDecor-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10%, 15%);
+  }
+  50% {
+    transform: translate(20%, 20%);
+  }
+  75% {
+    transform: translate(10%, 15%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes animDecor-3 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-40%, 40%) rotate(180deg);
+  }
+
+  100% {
+       transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+
+@keyframes animDecor-4 {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+  50% {
+    transform: rotate(-180deg) scale(2);
+  }
+  100% {
+    transform: rotate(-360deg)scale(0);
+  }
+}
+
+@keyframes lineAnimation {
+  0% {
+    transform: translateY(-60px) rotate(15deg);
+  }
+  //20% {
+  //  transform: translateY(0);
+  //  opacity: 1;
+  //  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  //}
+  //80% {
+  //  transform: translateY(0);
+  //  opacity: 1;
+  //  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  //}
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+
+  }
+}
+
+@keyframes closeEyes {
+  0% {
+    height: 0%;
+  }
+
+  5% {
+    height: 100%;
+  }
+
+  10% {
+    height: 0%;
+  }
+
+}

@@ -1,0 +1,74 @@
+.backToHomeOwlButton {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &-text {
+    position: absolute;
+    top: 25px;
+    left: -5px;
+    display: block;
+    font-family: 'reenie-beanie';
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-white;
+    transform: rotate(-30deg);
+  }
+
+  &-owl {
+    position: absolute;
+    @extend %bg;
+    background-size: contain;
+    bottom: 5px;
+    right: 0;
+    width: 85px;
+    height: 94px;
+    background-image: url("/image/formOwl/owl.svg");
+  }
+
+  &-arrow {
+    position: absolute;
+    @extend %bg;
+    bottom: 0;
+    right: 32px;
+    width: 64px;
+    height: 79px;
+    background-size: contain;
+    background-image: url("/image/formOwl/arrow.svg");
+  }
+}
+
+.light {
+  .backToHomeOwlButton {
+
+    &-arrow {
+      background-image: url("/image/formOwl/arrow-day.svg");
+    }
+
+    &-text {
+      @include gradientColor($color-nile);
+    }
+
+  }
+}
+
+@include breakpoint-min-max(lg, xl) {
+  .backToHomeOwlButton {
+    &-owl {
+      width: 126px;
+      height: 139px;
+    }
+
+    &-arrow {
+      width: 95px;
+      height: 118px;
+      right: 53px;
+    }
+
+    &-text {
+      top: 40px;
+      left: 15px;
+    }
+  }
+}

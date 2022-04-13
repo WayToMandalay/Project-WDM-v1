@@ -1,0 +1,11 @@
+.mainFifth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@include breakpoint-min(xl) {
+
+}
+

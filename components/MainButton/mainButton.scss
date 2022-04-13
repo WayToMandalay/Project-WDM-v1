@@ -1,0 +1,102 @@
+.mainButton {
+  @extend %btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "remora-sans-w3";
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid $color-white;
+  transition: all $transition;
+
+  &.small {
+    width: 134px;
+    height: 48px;
+  }
+
+  &.medium {
+    width: 176px;
+    height: 48px;
+  }
+
+  &.yellow {
+    color: $color-bean;
+    background: $gradient-yellow;
+  }
+
+  &.black {
+    color: $color-white;
+    background-color: $color-bean;
+  }
+
+  &:active {
+    top: 4px;
+    right: 4px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 138px;
+    height: 52px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &.small {
+      width: 138px;
+      height: 52px;
+    }
+  
+    &.medium {
+      width: 180px;
+      height: 52px;
+    }
+  }
+
+  &-cover {
+    @extend %bg;
+    position: absolute;
+    bottom: 0;
+
+    &.small {
+      width: 132px;
+      height: 44px;
+      background-image: url('/elements/btn-layout-small.svg');
+    }
+
+    &.medium {
+      width: 174px;
+      height: 44px;
+      background-image: url('/elements/btn-layout-medium.svg');
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.light {
+
+  .mainButton {
+    border-color: #040C0F;
+  }
+  .mainButton-cover.small {
+    background-image: url('/elements/btn-layout-small-day.svg');
+  }
+
+  .mainButton.black {
+    color: $color-bean;
+    background-color: $color-white;
+  }
+
+  .mainButton-cover.medium {
+    background-image: url('/elements/btn-layout-medium-day.svg');
+  }
+}

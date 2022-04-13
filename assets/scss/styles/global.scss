@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background: $bg-night;
+  color: $color-white;
+  height: 100vh;
+  width: 100vw;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "remora-sans-w3";
+  transition: color $transition;
+  overflow-x: hidden;
+
+  &.light {
+    background: $bg-day;
+    color: $color-bean;
+  }
+
+  @include breakpoint-min(md) {
+    font-size: 14px;
+  }
+
+  @include breakpoint-min(xl) {
+    font-size: 16px;
+  }
+}
+
+section {
+  @extend %section-padding;
+  height: var(--app-height);
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+
+// Container
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 288px;
+  @include breakpoint-min(sm) {
+    max-width: 396px;
+  }
+
+  @include breakpoint-min(md) {
+    max-width: 736px;
+  }
+
+  @include breakpoint-min(lg) {
+    max-width: 928px;
+  }
+
+  @include breakpoint-min(xl) {
+    max-width: 1200px;
+  }
+
+  @include breakpoint-min(xxl) {
+    max-width: 1680px;
+  }
+
+}
+
+.container-content {
+  max-width: 288px;
+  margin: 0 auto;
+
+  @include breakpoint-min(md) {
+    max-width: 736px;
+  }
+}
+
+// Headings
+
+h1 {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+
+  @include breakpoint-min(sm) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  @include breakpoint-min(md) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @include breakpoint-min(xl) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @include breakpoint-min(xxl) {
+    font-size: 72px;
+    line-height: 96px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+
+  @include breakpoint-min(sm) {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+  }
+
+  @include breakpoint-min(md) {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  @include breakpoint-min(xl) {
+    font-size: 48px;
+    line-height: normal;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+
+  @include breakpoint-min(md) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-min(xl) {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+
+  @include breakpoint-min(xl) {
+    font-size: 22px;
+  }
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 600;
+
+  @include breakpoint-min(md) {
+    font-size: 15px;
+  }
+
+  @include breakpoint-min(xl) {
+    font-size: 18px;
+  }
+}
+
+.show-m {
+  display: none;
+
+  @include breakpoint-min(md) {
+    display: block;
+  }
+}
+
+.hide-m {
+  display: block;
+
+  @include breakpoint-min(md) {
+
+    display: none !important;
+
+  }
+}
+
+.show-xl {
+  @include breakpoint-max(xl) {
+    display: none !important;
+  }
+}
+
+.hide-xl {
+
+  @include breakpoint-min(xl) {
+    display: none !important;
+  }
+}
+
+// Decor Elements
+
+.decor-1 {
+  @extend %bg;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  background-image: url('/decor/element-1.svg');
+  width: 12px;
+  height: 12px;
+  animation: animDecor-1 2s linear infinite;
+
+
+  @include breakpoint-min(md) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include breakpoint-min(xl) {
+    width: 28px;
+    height: 28px;
+    animation: none;
+  }
+}
+
+.decor-2 {
+  @extend %bg;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  background-image: url('/decor/element-2.svg');
+  width: 18px;
+  height: 12px;
+  animation: animDecor-2 2s linear infinite;
+
+  @include breakpoint-min(md) {
+    width: 24px;
+    height: 18px;
+  }
+
+  @include breakpoint-min(xl) {
+    width: 36px;
+    height: 27px;
+    animation: none;
+  }
+}
+
+.decor-3 {
+  @extend %bg;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  background-image: url('/decor/element-3.svg');
+  width: 24px;
+  height: 24px;
+  transform-origin: center;
+  animation: animDecor-3 10s linear infinite;
+
+  @include breakpoint-min(sm) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @include breakpoint-min(xl) {
+    width: 42px;
+    height: 42px;
+    animation: none;
+  }
+}
+
+.decor-4 {
+  @extend %bg;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  background-image: url('/decor/element-4.svg');
+  width: 12px;
+  height: 12px;
+  animation: animDecor-4 5s linear infinite;
+
+  @include breakpoint-min(xl) {
+    width: 14px;
+    height: 14px;
+    animation: none;
+  }
+}
+
+.light {
+  .decor-1 {
+    background-image: url('/decor/element-1-day.svg');
+  }
+  .decor-2 {
+    background-image: url('/decor/element-2-day.svg');
+  }
+  .decor-3 {
+    background-image: url('/decor/element-3-day.svg');
+  }
+  .decor-4 {
+    background-image: url('/decor/element-4-day.svg');
+  }
+}

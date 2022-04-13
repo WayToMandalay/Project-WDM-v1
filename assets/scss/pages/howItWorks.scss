@@ -1,0 +1,136 @@
+.mainSecond {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .decor-1, .decor-2, .decor-3,.decor-4 {
+    display: none;
+  }
+
+  &__mobile-carousel-container {
+    position: relative;
+    padding-top: 15px;
+    overflow-x: hidden;
+
+  }
+
+  &__desktop-accordion-container {
+    position: relative;
+    width: 864px;
+    margin-top: 80px;
+  }
+
+  &__title {
+    align-self: center;
+  }
+}
+
+@include breakpoint-min(xs) {
+  .mainSecond {
+    &__mobile-carousel-container {
+      padding-top: 30px;
+    }
+    .decor-1 {
+      display: block;
+      bottom: 20%;
+      right: 5%;
+    }
+
+    .decor-2 {
+      display: block;
+      top: 25%;
+      right: 6%;
+      transform: rotate(70deg);
+    }
+    .decor-3 {
+      display: block;
+      top: 22%;
+      left: 5%;
+      transform: rotate(270deg);
+    }
+    .decor-4 {
+      display: block;
+      bottom: 25%;
+      left: 7%;
+    }
+  }
+}
+
+@include breakpoint-min(sm) {
+  .mainSecond {
+    &__mobile-carousel-container {
+      padding-top: 60px;
+    }
+    .decor-1 {
+      bottom: 24%;
+      right: 5%;
+    }
+
+    .decor-2 {
+      top: 20%;
+      right: 6%;
+    }
+    .decor-3 {
+      top: 23%;
+      left: 5%;
+    }
+    .decor-4 {
+      bottom: 25%;
+      left: 7%;
+    }
+  }
+
+}
+
+@include breakpoint-min(md) {
+  .mainSecond {
+    &__mobile-carousel-container {
+      padding-top: 100px;
+    }
+    .decor-1 {
+      bottom: 24%;
+      right: 5%;
+    }
+
+    .decor-2 {
+      top: 20%;
+      right: 6%;
+    }
+    .decor-3 {
+      top: 23%;
+      left: 5%;
+    }
+    .decor-4 {
+      bottom: 25%;
+      left: 7%;
+    }
+  }
+}
+
+@include breakpoint-min(xl) {
+  .mainSecond {
+    align-items: center;
+
+    &__title {
+      width: auto;
+    }
+    .decor-1 {
+      bottom: 14%;
+      right: 18%;
+    }
+
+    .decor-2 {
+      top: 27%;
+      right: 12%;
+    }
+    .decor-3 {
+      top: 27%;
+      left: 15%;
+    }
+    .decor-4 {
+      bottom: 20%;
+      left: 17%;
+    }
+  }
+}

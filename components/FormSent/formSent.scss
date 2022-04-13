@@ -1,0 +1,146 @@
+.formSent {
+
+  &-container {
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    @extend %bg;
+    background-size: contain;
+    width: 288px;
+    height: 39px;
+    margin-bottom: 16px;
+    background-image: url('/image/formSent/formSent_320.png');
+  }
+
+  &-content {
+    width: 271px;
+    line-height: 18px;
+    text-align: center;
+    color: $color-regent;
+    margin-bottom: 24px;
+  }
+}
+
+.theGuy {
+  @extend %bg;
+  background-size: contain;
+  width: 81px;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-image: url('/image/theGuy.png');
+  transition: bottom $transition;
+
+  &.showGuy {
+    bottom: 80px;
+  }
+}
+
+.light {
+  .formControl {
+    border-color: $color-waikawa;
+    color: $color-waikawa;
+  }
+
+  .formSent-title {
+    background-image: url('/image/formSent/formSent_320-day.png');
+  }
+}
+
+@include breakpoint-min(sm) {
+
+  .formSent-container {
+    width: 400px;
+  }
+
+  .formSent-title {
+    width: 400px;
+    height: 53px;
+  }
+
+  .formSent-content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .theGuy {
+    width: 122px;
+    height: 120px;
+    bottom: -90px;
+
+    &.showGuy {
+      bottom: 90px;
+    }
+  }
+
+
+}
+
+@include breakpoint-min(md) {
+  .formSent-container {
+    width: 500px;
+  }
+  .formSent-title {
+    width: 499px;
+    height: 63px;
+  }
+  .formSent-content {
+    width: auto;
+  }
+
+  .theGuy {
+    width: 143px;
+    height: 140px;
+    bottom: -110px;
+    &.showGuy {
+      bottom: 110px;
+    }
+  }
+}
+
+@include breakpoint-min(lg) {
+  .theGuy {
+    width: 184px;
+    height: 180px;
+    bottom: -110px;
+    &.showGuy {
+      bottom: 110px;
+    }
+  }
+}
+
+@include breakpoint-min(xl) {
+  .formSent-container {
+    width: 531px;
+  }
+
+  .formSent-title {
+    width: 531px;
+    height: 73px;
+    margin-bottom: 24px;
+  }
+
+  .theGuy {
+    width: 184px;
+    height: 180px;
+    bottom: -200px;
+    &.showGuy {
+      bottom: 0px;
+    }
+  }
+}
+
+@include breakpoint-min(xxl) {
+  .formSent-container {
+    width: 660px;
+  }
+  .formSent-title {
+    width: 660px;
+    height: 88px;
+  }
+}

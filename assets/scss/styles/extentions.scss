@@ -1,0 +1,29 @@
+%bg {
+  //background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-size: cover;
+}
+
+%section-padding {
+  padding-top: 96px;
+  padding-bottom: 75px;
+  @include breakpoint-min(xs) {
+    padding-top: 96px;
+    padding-bottom: 86px;
+  }
+  @include breakpoint-min(md) {
+    padding-top: 124px;
+    padding-bottom: 108px;
+  }
+  @include breakpoint-min(xl) {
+    padding-top: 124px;
+    padding-bottom: 116px;
+  }
+}

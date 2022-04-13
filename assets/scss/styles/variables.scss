@@ -1,0 +1,64 @@
+// Font-size
+// $fs-xs: 12px;
+// $fs-md: 14px;
+// $fs-s: 18px;
+// $fs-m: 24px;
+// $fs-l: 30px;
+// $fs-xl: 45px;
+// $fs-xxl: 56px;
+// $fs-xxxl: 64px;
+
+
+// Colors
+$color-bean: #040C0F;
+$color-regent: #89989D;
+$color-white: #ffffff;
+
+$color-yellow: #FFB200;
+
+$color-tropical: #C2C9F9;
+$color-cinnamon: #725000;
+$color-perfume: #F6C8F9;
+$color-cosmos: #FFD3D3;
+$color-waikawa: #5C6D8D;
+
+// Gradients
+$gradient-bittersweet: linear-gradient(180deg, #FF6B6B 0%, #C70000 100%);
+$gradient-yellow: linear-gradient(180deg, #FFD87E 0%, #FFB200 100%);
+$gradient-purple: linear-gradient(180deg, #BA507C 0%, #69008C 100%);
+$gradient-east: linear-gradient(180deg, #3B4584 0%, #0D0E16 100%);
+$gradient-day: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+
+// Colors Day
+$color-vermilion: linear-gradient(180deg, #DD400E 0%, #C00000 100%);
+$color-nile: linear-gradient(180deg, #164554 0%, #040C0F 100%);
+$color-pizzazz: linear-gradient(180deg, #FF00E5 0%, #FF007A 100%);
+$color-pizzazz-2: linear-gradient(180deg, #C91B6E 0%, #AE109E 100%);
+
+
+// Background
+
+$bg-night: linear-gradient(180deg, #070C2B 0%, #000000 100%);
+$bg-day: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+$transition: 0.3s;
+
+// Controllers
+$color-yellow-controller: linear-gradient(135deg, #FFD87E 0%, #FFB200 100%);
+
+// Breakpoints
+$breakpoints: (
+  xs: 375px,
+  sm: 428px,
+  smd: 542px,
+  md: 768px,
+  lg: 992px,
+  xl: 1440px,
+  xxl: 1920px,
+);
+
+// Heights
+$height-xl: calc(100vh - 124px - 116px);
+
+// Owl
+
+$eye-lid: #042834;

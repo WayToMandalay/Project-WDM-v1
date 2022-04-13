@@ -1,0 +1,150 @@
+.aboutSection {
+  // padding-top: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .decor-1, .decor-2, .decor-3,.decor-4 {
+    display: none;
+  }
+
+  &__mobile-carousel-container {
+    padding-top: 15px;
+    overflow: hidden;
+    position: relative;
+    .decor-1, .decor-2, .decor-3,.decor-4 {
+      display: none;
+    }
+  }
+
+  &__medium-carouser-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: space-between;
+    padding-left: 16px;
+    position: relative;
+    //margin-top: 30px;
+    padding-top: 60px;
+  }
+
+
+  &__title {
+    align-self: center;
+    margin-bottom: 0px;
+  }
+}
+
+@include breakpoint-min(xs) {
+  .aboutSection {
+    .decor-1 {
+      display: block;
+      bottom: 20%;
+      left: 25px;
+    }
+
+    .decor-2 {
+      display: block;
+      top: 24%;
+      left: 20px;
+      transform: rotate(0deg);
+    }
+    .decor-3 {
+      display: block;
+      top: 23%;
+      right: 18px;
+      transform: rotate(0deg);
+    }
+    .decor-4 {
+      display: block;
+      bottom: 20%;
+      right: 25px;
+    }
+  }
+  .aboutSection__mobile-carousel-container {
+    padding-top: 30px;
+  }
+
+}
+
+@include breakpoint-min(sm) {
+  .aboutSection {
+    .decor-1 {
+      bottom: 26%;
+      left: 25px;
+    }
+
+    .decor-2 {
+      top: 29%;
+      left: 20px;
+      transform: rotate(0deg);
+    }
+    .decor-3 {
+      top: 27%;
+      right: 18px;
+      transform: rotate(0deg);
+    }
+    .decor-4 {
+      bottom: 27%;
+      right: 25px;
+    }
+  }
+  .aboutSection__mobile-carousel-container {
+    padding-top: 60px;
+  }
+}
+
+@include breakpoint-min(md) {
+  .aboutSection {
+
+    &__medium-carouser-container {
+      padding-top: 100px;
+    }
+
+    .decor-1 {
+      bottom: 19%;
+      left: 5%;
+    }
+
+    .decor-2 {
+      top: 29%;
+      left: 13%;
+    }
+    .decor-3 {
+      top: 27%;
+      right: 10%;
+      transform: rotate(-20deg);
+    }
+    .decor-4 {
+      bottom: 25%;
+      right: 5%;
+    }
+  }
+}
+
+@include breakpoint-min(xl) {
+  .aboutSection {
+    &__title {
+      width: auto;
+    }
+    .decor-1 {
+      bottom: 19%;
+      left: 22%;
+    }
+    .decor-2 {
+      top: 26%;
+      left: 16%;
+    }
+    .decor-3 {
+      top: 28%;
+      right: 10%;
+      transform: rotate(-0deg);
+    }
+    .decor-4 {
+      bottom: 17%;
+      right: 12%;
+    }
+  }
+}
+

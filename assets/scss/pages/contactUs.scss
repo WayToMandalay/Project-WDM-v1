@@ -1,0 +1,191 @@
+.contactUs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+
+  .decor-1, .decor-2, .decor-3,.decor-4 {
+    display: none;
+  }
+
+  &-title-span {
+    position: relative;
+
+    &::before {
+      @extend %bg;
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &__backToHomeOwlWrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 120px;
+    display: none;
+    width: 152px;
+    height: 121px;
+  }
+}
+
+.contactUs__form {
+  width: 100%;
+  max-width: 288px;
+}
+
+@include breakpoint-min(xs) {
+  .contactUs {
+    .decor-1 {
+      display: block;
+      top: 27%;
+      right: 10%;
+    }
+
+    .decor-2 {
+      display: block;
+      top: 29%;
+      left: 20px;
+      transform: rotate(0deg);
+    }
+    .decor-3 {
+      display: block;
+      bottom: 20%;
+      left: 30px;
+      transform: rotate(180deg);
+    }
+    .decor-4 {
+      display: block;
+      bottom: 25%;
+      right: 35px;
+    }
+  }
+}
+
+@include breakpoint-min(sm) {
+  .contactUs {
+    .decor-1 {
+      top: 27%;
+      right: 10%;
+    }
+
+    .decor-2 {
+      top: 29%;
+      left: 20px;
+    }
+    .decor-3 {
+      bottom: 20%;
+      left: 30px;
+    }
+    .decor-4 {
+      bottom: 25%;
+      right: 35px;
+    }
+  }
+
+  .contactUs__form {
+    max-width: 364px;
+  }
+
+  .contactUs-title-span::before {
+    display: block;
+    bottom: -5px;
+    left: -5px;
+    width: 66px;
+    height: 13px;
+    background-size: contain;
+    background-image: url('/elements/contact-title-underline-sm.svg');
+  }
+}
+
+@include breakpoint-min(md) {
+  .contactUs {
+    &__backToHomeOwlWrapper {
+      display: block;
+    }
+    &__form {
+      max-width: 480px;
+    }
+
+    .decor-1 {
+      top: 34%;
+      right: 15%;
+    }
+
+    .decor-2 {
+      top: 37%;
+      left: 10%;
+    }
+    .decor-3 {
+      bottom: 23%;
+      left: 17%;
+    }
+    .decor-4 {
+      bottom: 28%;
+      right: 17%;
+    }
+  }
+
+  .contactUs-title-span::before {
+    width: 100px;
+    height: 20px;
+    left: -10px;
+    bottom: -10px;
+  }
+}
+
+@include breakpoint-min(lg) {
+  .contactUs__form {
+    max-width: 630px;
+  }
+}
+
+@include breakpoint-min-max(lg, xl) {
+  .contactUs__backToHomeOwlWrapper {
+    width: 226px;
+    height: 180px;
+  }
+}
+
+@include breakpoint-min(xl) {
+  .contactUs {
+    margin-bottom: 0;
+    padding-bottom: 116px;
+
+    &__title {
+      text-align: center;
+    }
+    &__backToHomeOwlWrapper {
+      bottom: 33px;
+      right: 65px;
+    }
+    &__form {
+      max-width: 640px;
+    }
+    .decor-1 {
+      top: 30%;
+      right: 15%;
+    }
+    .decor-2 {
+      top: 33%;
+      left: 20%;
+    }
+  }
+}
+
+@include breakpoint-min(xxl) {
+  .contactUs {
+
+    &__title {
+      width: 640px;
+    }
+  }
+}
+
+.light {
+  .contactUs-title-span::before {
+    background-image: url('/elements/contact-title-underline-sm-day.svg');
+  }
+}

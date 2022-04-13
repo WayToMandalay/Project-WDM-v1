@@ -1,0 +1,55 @@
+.start-swiping {
+  position: relative;
+  font-family: 'reenie-beanie', serif;
+  color: $color-white;
+
+  &_l1 {
+    text-align: left;
+  }
+
+  &_l2 {
+    text-align: right;
+  }
+}
+
+.swiping-star {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-image: url('/elements/swiping-star.svg');
+
+  &.swiping-star-1 {
+    top: -10px;
+    right: 0;
+  }
+
+  &.swiping-star-2 {
+    left: 0;
+    bottom: -10px;
+  }
+
+  &.swiping-star-3 {
+    right: -20px;
+    bottom: 0;
+  }
+}
+
+.light {
+
+  .start-swiping {
+    @include gradientColor($color-nile);
+  }
+
+  .swiping-star {
+    background-image: url('/elements/swiping-star-day.svg');
+  }
+}
+
+@include breakpoint-min(sm) {
+  .start-swiping {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+}

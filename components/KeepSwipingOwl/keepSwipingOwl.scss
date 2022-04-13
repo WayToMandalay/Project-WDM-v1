@@ -1,0 +1,109 @@
+.keepSwipingOwlContainer {
+    display: flex;
+    position: absolute;
+    bottom: -60px;
+    right: -140px;
+    flex-direction: column;
+    justify-content: center;
+    width: 231px;
+    height: 146px;
+}
+
+.keepSwipingOwl {
+    @extend %bg;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('/image/owl-right.png');
+
+
+    &__title {
+        position: absolute;
+        top: -70px;
+        right: -85px;
+        font-family: 'reenie-beanie';
+        font-size: 32px;
+        line-height: 32px;
+        transform: rotate(-12deg);
+        padding-bottom: 20px;
+
+        &:after {
+            @extend %bg;
+            transform: rotate(12deg);
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: -10px;
+            background-image: url('/elements/desktopCarousel/keep-swiping-med-carousel.svg');
+            background-size: contain;
+            transition: background 0.25s 0.1s ease;
+            width: 174px;
+            height: 80px;
+        }
+    }
+}
+
+.light {
+    .keepSwipingOwl {
+        &__title {
+
+            &::after {
+                background-size: contain;
+                background-image: url('/elements/desktopCarousel/keep-swiping-med-carousel-day.svg');
+                transition: background 0.25s 0.1s ease;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(lg) {
+    .keepSwipingOwlContainer {
+        bottom: -60px;
+        right: -150px;
+    }
+
+    .keepSwipingOwl {
+
+        &__title {
+            top: -70px;
+            right: -100px;
+
+            &:after {
+                bottom: -30px;
+                left: 0px;
+
+            }
+        }
+    }
+}
+
+@include breakpoint-min(xl) {
+    .keepSwipingOwlContainer {
+        bottom: -70px;
+        right: -210px;
+        width: 310px;
+        height: 196px;
+    }
+
+    .keepSwipingOwl {
+
+        &__title {
+            font-size: 56px;
+            line-height: 56px;
+            top: -90px;
+            right: -220px;
+            padding-bottom: 40px;
+
+            &:after {
+                bottom: -7px;
+                left: 10px;
+                transform: rotate(9deg);
+                background-size: contain;
+                width: 255px;
+                height: 90px;
+            }
+        }
+    }
+}
+

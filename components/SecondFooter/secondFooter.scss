@@ -1,0 +1,28 @@
+.secondFooter {
+  position: fixed;
+  bottom: 0;
+  right: 64px;
+  height: 116px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__rollerBlock {
+    @extend %bg;
+    background-size: contain;
+    width: 80px;
+    height: 78px;
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: transform 1.4s ease;
+    background-image: url('/elements/roller2.svg');
+  }
+}
+
+.light {
+  .secondFooter {
+    &__rollerBlock {
+      background-image: url('/elements/roller2-day.svg');
+    }
+  }
+}

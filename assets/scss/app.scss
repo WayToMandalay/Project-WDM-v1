@@ -1,0 +1,45 @@
+@import "styles/variables";
+@import "styles/myMixins";
+@import "styles/global";
+@import "styles/extentions";
+@import "styles/animation";
+
+//Pages
+@import "pages/main";
+@import "pages/howItWorks";
+@import "pages/results";
+@import "pages/portfolio";
+@import "pages/contactUs";
+@import "pages/about";
+
+// Components
+@import "../../components/Header/header";
+@import "../../components/Footer/footer";
+@import "../../components/SecondFooter/secondFooter";
+@import "../../components/StartSwiping/startSwiping";
+@import "../../components/KeepSwiping/keepSwiping";
+@import "../../components/KeepSwipingOwl/keepSwipingOwl";
+@import "../../components/BackToHomeOwlButton/backToHomeOwlButton";
+
+@import "../../components/MainFourth/mainFourth";
+
+
+
+
+//Form
+@import "../../components/Form/form";
+@import "../../components/FormSent/formSent";
+@import "../../components/Form/Checkbox/checkbox";
+@import "../../components/MainButton/mainButton";
+
+//Carousels
+@import "../../components/MobileCarousel/mobileCarousel";
+@import "../../components/MediumCarousel/mediumCarousel";
+@import "../../components/MobileCarouselLong/mobileCarouselLong";
+@import "../../components/MobileMagicCarousel/mobileMagicCarousel";
+@import "../../components/DesktopMagicCarousel/desktopMagicCarousel";
+@import "../../components/DesktopAccordion/desktopAccordion";
+
+
+@import "node_modules/swiper/swiper.min.css";
+@import "node_modules/swiper/modules/effect-fade/effect-fade.min.css";

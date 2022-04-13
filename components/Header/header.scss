@@ -1,0 +1,223 @@
+.header {
+  //position: relative;
+  position: fixed;
+  width: 100%;
+  padding: 16px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 15;
+
+  &__logo {
+    @extend %bg;
+    display: block;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    background-image: url('/logo/logo.svg');
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-btn-s-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include breakpoint-min(md) {
+      display: none;
+    }
+  }
+
+  &-btn-m-container {
+    display: none;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      content: "";
+      border-radius: 50%;
+      background: $gradient-yellow;
+      z-index: -1;
+      bottom: -15px;
+      left: -15px;
+    }
+
+  }
+
+
+  &-btn-s {
+    @extend %btn;
+    position: relative;
+    color: inherit;
+    width: 60px;
+    height: 64px;
+    background-color: $color-bean;
+    border-radius: 0 0 0 8px;
+    border-left: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+    padding: 16px;
+    font-family: "remora-sans-w3";
+    font-size: 12px;
+    font-weight: 500;
+    z-index: auto;
+
+    &::before {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      content: "";
+      border-radius: 50%;
+      background: $gradient-yellow;
+      z-index: -1;
+      bottom: -15px;
+      left: -15px;
+    }
+
+    &-wrapper {
+      &::before {
+        @extend %bg;
+        width: 65px;
+        height: 68px;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -5px;
+        background-size: cover;
+        background-image: url("/buttons/small/after.svg");
+      }
+    }
+  }
+
+  &__day-night {
+    @extend %btn;
+
+    background-image: url("/icons/footer/day-night-m-day.svg");
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+
+    &__container {
+      position: absolute;
+      right: 100px;
+      top: 30%;
+    }
+
+    &.header__day-day {
+      background-image: url("/icons/footer/day-night-m.svg");
+    }
+  }
+
+  &__partner {
+    bottom: 5px;
+    left: 0px;
+    position: absolute;
+    width: 99px;
+    height: 20px;
+
+    @extend %bg;
+    background-image: url('/logo/google-partner.svg');
+  }
+}
+
+.light {
+
+  .header__logo {
+    background-image: url('/logo/logo_day.svg');
+  }
+
+  .header__partner {
+    background-image: url('/logo/google-partner_day.svg');
+  }
+
+  .header-btn-s {
+    border-color: $color-bean;
+    background-color: #fff;
+
+    &::before {
+      background: $color-vermilion;
+    }
+    
+    &-wrapper {
+
+      &::before {
+        background-image: url("/buttons/small/after-day.svg");
+      }
+    }
+  }
+
+  .header-btn-m-container {
+
+    &::before {
+      background: $gradient-bittersweet;
+    }
+
+  }
+}
+
+@include breakpoint-min(sm) {
+  .header {
+    padding-top: 24px;
+  }
+
+  .header__day-night__container {
+    right: 150px;
+  }
+
+  .header-btn-s {
+    font-size: 14px;
+    width: 76px;
+    height: 81px;
+  }
+
+  .header-btn-s-wrapper {
+    &::before {
+      height: 86px;
+      width: 82px;
+    }
+  }
+}
+
+@include breakpoint-min(md) {
+  .header {
+    padding-top: 32px;
+  }
+
+  .header__day-night__container {
+    right: 200px;
+    top: 43px;
+  }
+
+  .header__partner {
+    bottom: 0;
+  }
+
+  .header-btn-m-container {
+    display: block;
+  }
+}
+
+@include breakpoint-min(lg) {
+  .header {
+
+  }
+  .header__day-night__container {
+    right: 250px;
+  }
+}
+
+@include breakpoint-min(xl) {
+  .header {
+    padding: 32px 64px 40px 24px;
+  }
+
+  .header__day-night__container {
+    display: none;
+  }
+}

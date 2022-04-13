@@ -1,0 +1,266 @@
+.mainFourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &-title {
+    margin-bottom: 25px;
+    position: relative;
+    line-height: 35px;
+    width: 100%;
+    user-select: none;
+
+    &-padding {
+      padding-right: 110px;
+    }
+  }
+
+  &-doubling {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    @extend %bg;
+    background-size: cover;
+    width: 138px;
+    height: 35px;
+    background-image: url('/image/doubling.png');
+  }
+
+  &__keepSwiping {
+    position: absolute;
+
+    font-family: 'reenie-beanie';
+    font-size: 24px;
+    line-height: 24px;
+    padding: 20px 0;
+    user-select: none;
+    text-align: center;
+    transform-origin: left top;
+    transition: transform 0.8s ease, left 0.8s ease, bottom 0.8s ease;
+    transform: rotate(100deg);
+    width: 100%;
+    left: -50%;
+    bottom: -20%;
+
+    &.show {
+      transform: rotate(-9deg);
+      left: 0;
+      bottom: 18%;
+    }
+
+
+    &::after {
+      @extend %bg;
+      background-size: contain;
+      position: absolute;
+      content: '';
+      width: 45px;
+      height: 56px;
+      background-image: url('/elements/arrow_heart.svg');
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .decor-1 {
+    top: 30%;
+    left: 30px;
+  }
+
+  .decor-2 {
+    bottom: 30%;
+    left: 5px;
+    transform: rotate(260deg);
+  }
+  .decor-3 {
+    bottom: 20%;
+    right: 15px;
+    transform: rotate(110deg);
+  }
+  .decor-4 {
+    top: 30%;
+    right: 15px;
+  }
+}
+
+.light {
+  .mainFourth__keepSwiping {
+
+    &::after {
+      background-image: url('/elements/arrow_heart-day.svg');
+    }
+  }
+
+  .mainFourth-doubling {
+    background-image: url('/image/doubling-day.png');
+  }
+
+}
+
+@include breakpoint-min(sm) {
+  .mainFourth {
+    .decor-1 {
+      top: 28%;
+    }
+
+    .decor-4 {
+      top: 30%;
+      right: 15px;
+    }
+
+    &__keepSwiping {
+
+      &.show {
+        bottom: 20%
+      }
+
+      &:after {
+        width: 58px;
+        height: 72px;
+        bottom: -60px;
+      }
+    }
+
+    &-title-padding {
+      padding-right: 170px;
+    }
+
+    &-title {
+      line-height: 40px;
+    }
+
+    &-doubling {
+      width: 174px;
+      height: 46px;
+      right: 40px;
+      top: -5px;
+    }
+  }
+
+}
+
+@include breakpoint-min(md) {
+  .mainFourth {
+    .decor-1 {
+      top: 28%;
+      left: 10%;
+    }
+
+    .decor-2 {
+      left: 15%;
+    }
+    .decor-3 {
+      bottom: 35%;
+      right: 8%;
+      transform: rotate(100deg);
+    }
+    .decor-4 {
+      top: 25%;
+      right: 17%;
+    }
+
+    &__keepSwiping {
+      &:after {
+        width: 66px;
+        height: 82px;
+        bottom: -70px;
+      }
+    }
+
+    &-title {
+      height: 104px;
+      line-height: 50px;
+    }
+    &-doubling {
+      width: 220px;
+      height: 59px;
+      top: -8px;
+      right: 160px;
+    }
+    &-title-padding {
+      padding-right: 200px;
+    }
+  }
+}
+
+@include breakpoint-min(lg) {
+
+  .mainFourth-doubling {
+    width: 220px;
+    height: 59px;
+    right: 110px;
+  }
+
+  .mainFourth-title-padding {
+    padding-right: 180px;
+  }
+}
+
+@include breakpoint-min(xl) {
+
+  .mainFourth {
+    &__keepSwiping {
+      &.show {
+        bottom: 10%;
+      }
+    }
+
+    &-doubling {
+      width: 237px;
+      height: 63px;
+      top: -8px;
+      right: 3px;
+    }
+
+    &-title {
+      line-height: 55px;
+      width: auto;
+      text-align: center;
+      margin-bottom: 40px;
+      &-padding {
+        padding-right: 200px;
+      }
+    }
+
+    .decor-1 {
+      top: 28%;
+      left: 10%;
+    }
+    .decor-2 {
+      left: 7%;
+      bottom: 15%;
+    }
+    .decor-3 {
+      bottom: 21%;
+      right: 8%;
+    }
+    .decor-4 {
+      top: 27%;
+      right: 18%;
+    }
+  }
+
+}
+
+@include breakpoint-min(xxl) {
+  .mainFourth {
+    .decor-1 {
+      top: 28%;
+      left: 15%;
+    }
+    .decor-2 {
+      left: 17%;
+      bottom: 15%;
+    }
+    .decor-3 {
+      bottom: 21%;
+      right: 12%;
+    }
+    .decor-4 {
+      top: 27%;
+      right: 23%;
+    }
+  }
+}

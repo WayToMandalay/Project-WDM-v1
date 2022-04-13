@@ -1,0 +1,613 @@
+:root {
+  --app-height: 100vh;
+}
+
+body {
+  overflow-y: hidden;
+  height: var(--app-height);
+  height: -webkit-fill-available;
+}
+
+.main {
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  &__title {
+    position: relative;
+    text-align: center;
+    user-select: none;
+
+    &.show {
+      .main__title-line-inner {
+        transform: translateY(0) rotate(0);
+      }
+    }
+
+    &-line {
+
+      overflow: hidden;
+
+      &-inner {
+        transform-origin: left bottom;
+        transform: translateY(90px) rotate(10deg);
+        transition: transform 1.2s;
+        transition-delay: 0.3s;
+      }
+
+      &:nth-child(2) {
+        .main__title-line-inner {
+          transition-delay: 0.4s;
+        }
+      }
+
+      &:nth-child(3) {
+        .main__title-line-inner {
+          transition-delay: 0.5s;
+        }
+      }
+    }
+
+
+    .orange {
+      @include gradientColor($gradient-yellow)
+    }
+
+    .circle {
+      position: relative;
+
+      &:before {
+        @extend %bg;
+        z-index: -1;
+        background-size: contain;
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 29px;
+        background-image: url('/decor/mainTitle-circle.png');
+        background-image: url('/decor/mainTitle-circle.webp');
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -42%);
+
+        @include breakpoint-min(sm) {
+          width: 52px;
+          height: 34px;
+        }
+        @include breakpoint-min(md) {
+          width: 88px;
+          height: 62px;
+          background-image: url('/decor/mainTitle-circle-lg.png');
+          background-image: url('/decor/mainTitle-circle-lg.webp');
+          transform: translate(-50%, -45%);
+        }
+      }
+    }
+
+
+    .crazy-1 {
+      font-family: 'reenie-beanie', serif;
+      font-weight: 500;
+      font-size: 28px;
+    }
+  }
+
+
+  &__start-swiping {
+    @extend %bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'reenie-beanie', serif;
+    width: 251px;
+    height: 38px;
+    background-size: contain;
+    background-image: url('/image/bring-sales.png');
+    background-image: url('/image/bring-sales.webp');
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0;
+    transform: scale(5);
+
+    //transition-delay: 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+
+    &.show {
+      opacity: 1;
+      transform: scale(1);
+
+      .main__start-swiping-text {
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      opacity: 0;
+      white-space: nowrap;
+      transition: opacity 0.3s 0.4s;
+    }
+
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &_wrapper {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-bottom: 100px;
+    }
+
+    &-textBlock {
+      position: absolute;
+      bottom: 0px;
+      right: 50px;
+      width: 80px;
+      height: 48px;
+      font-size: 24px;
+      line-height: 24px;
+      transform: rotate(-12deg)
+    }
+  }
+
+  &__swiper-pointer {
+    @extend %bg;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    display: block;
+    width: 133px;
+    height: 90px;
+    background-image: url('/image/swiper-pointer-sm.svg');
+  }
+
+  &__own-wrapper {
+    @extend %bg;
+    position: absolute;
+    bottom: 64px;
+    right: -100px;
+    width: 100px;
+    height: 80px;
+    z-index: 15;
+    background-size: cover;
+    background-image: url('/image/owl.png');
+    background-image: url('/image/owl.webp');
+    transition: right 0.4s ease;
+
+    &.show {
+      right: 0px;
+    }
+  }
+
+  &__ownWindow-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 416px;
+    height: 583px;
+    z-index: 10;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/image/window.png');
+    
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &-owl {
+        @extend %bg;
+        background-size: contain;
+        position: absolute;
+        width: 272px;
+        height: 219px;
+        background-image: url('/image/owl-xl-test.png');
+        bottom: 25px;
+        left: 20px;
+
+        &-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .eyeBrowLeft {
+            @extend %bg;
+            background-size: contain;
+            position: absolute;
+            left: 75px;
+            width: 60px;
+            height: 50px;
+            background-image: url('/brow-left.png');
+            z-index: 20;
+          }
+          .eyeBrowRight {
+            @extend %bg;
+            background-size: contain;
+            position: absolute;
+            left: 143px;
+            width: 60px;
+            height: 50px;
+            background-image: url('/brow-right.png');
+            z-index: 20;
+          }
+          .eyeLeft {
+            @extend %bg;
+            background-size: contain;
+            position: absolute;
+            left: 106px;
+            top: 33px;
+            width: 25px;
+            height: 25px;
+            background-image: url('/eye-left.png');
+            z-index: 10;
+            border-radius: 50%;
+          }
+          .leftLid {
+            position: absolute;
+            width: 24px;
+            height: 0%;
+            top: 1px;
+            left: 1px;
+            border-radius: 50%;
+            background-color: $eye-lid;
+            animation-timing-function: ease;
+
+          }
+          .eyeRight {
+            @extend %bg;
+            background-size: contain;
+            position: absolute;
+            left: 150px;
+            top: 33px;
+            width: 24px;
+            height: 25px;
+            background-image: url('/eye-right.png');
+            z-index: 10;
+          }
+          .rightLid {
+            position: absolute;
+            width: 23px;
+            height: 0%;
+            top: 2px;
+            left: 1px;
+            border-radius: 50%;
+            background-color: $eye-lid;
+            animation-timing-function: ease;
+          }
+
+          &:hover {
+            .rightLid, .leftLid {
+              animation: closeEyes 5s;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .decor-1 {
+    bottom: 30%;
+    left: 18px;
+  }
+
+  .decor-2 {
+    top: 18%;
+    left: 20px;
+  }
+  .decor-3 {
+    top: 17%;
+    right: 5px;
+  }
+  .decor-4 {
+    bottom: 40%;
+    right: 5px;
+  }
+}
+
+.light {
+
+  .main {
+    &__title {
+      .orange {
+        @include gradientColor($gradient-bittersweet)
+      }
+      .circle {
+        &:before {
+          background-image: url('/decor/mainTitle-circle-day.png');
+          background-image: url('/decor/mainTitle-circle-day.webp');
+
+          @include breakpoint-min(md) {
+            background-image: url('/decor/mainTitle-circle-lg-day.png');
+            background-image: url('/decor/mainTitle-circle-lg-day.webp');
+          }
+        }
+      }
+    }
+
+    &__start-swiping {
+      background-image: url('/image/bring-sales-day.png');
+      background-image: url('/image/bring-sales-day.webp');
+    }
+
+    &__swiper-pointer {
+      background-image: url('/image/swiper-pointer-sm-day.svg');
+    }
+
+    &__own-wrapper {
+      background-image: url('/image/owl-day.png');
+      background-image: url('/image/owl-day.webp');
+    }
+    &__ownWindow-wrapper {
+      background-image: url('/image/window-day.png');
+      //background-image: url('/image/window-day.webp');
+
+      &-inner-owl {
+        background-image: url('/image/owl-xl-day.png');
+        
+        .main__ownWindow-wrapper-inner-owl-eyeLeft {
+          background-image: url('/eye-left-day.png');
+        }
+        .main__ownWindow-wrapper-inner-owl-eyeRight {
+          background-image: url('/eye-right-day.png');
+        }
+
+        &-inner {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-min(xs) {
+  .main__own-wrapper {
+    width: 100px;
+    height: 80px;
+    bottom: 68px;
+    right: -200px;
+
+    &.show {
+
+    }
+  }
+}
+
+@include breakpoint-min(sm) {
+
+  .main {
+    padding-bottom: 160px;
+
+    .decor-1 {
+      bottom: 28%;
+      left: 35px;
+    }
+
+    .decor-3 {
+      top: 17%;
+      right: 15px;
+    }
+    .decor-4 {
+      bottom: 40%;
+      right: 15px;
+    }
+  }
+
+  .main__start-swiping {
+    width: 356px;
+    height: 54px;
+    font-size: 40px;
+  }
+
+  .main__start-swiping-textBlock {
+    right: 110px;
+    width: 106px;
+    height: 64px;
+    bottom: -20px;
+    color: $color-white;
+  }
+
+  .main__swiper-pointer {
+    width: 147px;
+    height: 100px;
+    bottom: -20px;
+    left: 35px;
+  }
+  .main__own-wrapper {
+    width: 160px;
+    height: 128px;
+  }
+}
+
+@include breakpoint-min(md) {
+
+  .main {
+    .decor-1 {
+      bottom: 32%;
+      left: 35px;
+    }
+
+    .decor-3 {
+      top: 17%;
+      right: 15px;
+    }
+    .decor-4 {
+      bottom: 40%;
+      right: 15px;
+    }
+  }
+
+  .main__title {
+    font-weight: 700;
+  }
+  .main__start-swiping {
+    width: 452px;
+    height: 63px;
+    font-size: 50px;
+  }
+
+  .main__swiper-pointer {
+    background-size: contain;
+    width: 190px;
+    height: 120px;
+    bottom: -40px;
+    left: 210px;
+  }
+
+  .main__start-swiping-textBlock {
+    right: 230px;
+  }
+
+  .main__own-wrapper {
+    width: 182px;
+    height: 146px;
+    right: -200px;
+    bottom: 87px;
+  }
+}
+
+@include breakpoint-min(lg) {
+
+  .main {
+    padding-bottom: 180px;
+  }
+  .main__title {
+    max-width: 650px;
+  }
+
+  .main__swiper-pointer {
+    left: 310px;
+  }
+
+  .main__start-swiping-textBlock {
+    right: 330px;
+  }
+
+  .main__own-wrapper {
+    width: 224px;
+    height: 180px;
+    bottom: 83px;
+    right: -250px;
+  }
+}
+
+@include breakpoint-min(xl) {
+  .main {
+    padding: 0;
+    padding-left: 50px;
+    align-items: flex-start;
+
+    &__title {
+      width: 640px;
+      text-align: left;
+    }
+
+    &__start {
+
+      &-swiping_wrapper {
+        width: 650px;
+        justify-content: flex-start;
+        padding-bottom: 130px;
+      }
+    }
+
+    &__swiper-pointer {
+      bottom: 25px;
+    }
+
+    &__start-swiping-textBlock {
+      bottom: 30px;
+      right: 70px;
+    }
+
+    .decor-1 {
+      bottom: 32%;
+      left: 5%;
+    }
+
+    .decor-2 {
+      top: 20%;
+      left: 35px;
+    }
+
+    .decor-3 {
+      top: 21%;
+      right: 35%;
+    }
+
+    .decor-4 {
+      bottom: 20%;
+      right: 40%;
+    }
+  }
+}
+
+@include breakpoint-min(xxl) {
+  .main {
+    padding-left: 100px;
+
+    &__title {
+      width: 880px;
+      max-width: 880px;
+    }
+
+    &__start-swiping {
+      width: 568px;
+      height: 82px;
+      font-size: 60px;
+    }
+
+    &__swiper-pointer {
+      width: 245px;
+      height: 155px;
+      bottom: -10px;
+      left: 360px;
+    }
+
+    &__start-swiping_wrapper {
+      width: 880px;
+    }
+
+    &__start-swiping-textBlock {
+      right: 200px;
+      bottom: 5px;
+    }
+
+    &__ownWindow-wrapper {
+      width: 576px;
+      height: 808px;
+    }
+
+    .decor-1 {
+      bottom: 28%;
+      left: 8%;
+    }
+
+    .decor-2 {
+      top: 17%;
+      left: 5%;
+    }
+
+    .decor-3 {
+      top: 21%;
+      right: 35%;
+    }
+
+    .decor-4 {
+      bottom: 20%;
+      right: 40%;
+    }
+  }
+}

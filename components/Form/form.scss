@@ -1,0 +1,140 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  margin-top: 25px;
+}
+
+input {
+  border-radius: 0;
+  appearance: none;
+}
+
+.contactFormGroup {
+}
+
+.form-line {
+  width: 100%;
+  display: flex;
+  column-gap: 16px;
+  justify-content: space-between;
+
+  &-expend {
+    width: 100%;
+    display: flex;
+    column-gap: 16px;
+    row-gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.formControl {
+  width: 100%;
+  flex-shrink: 1;
+  padding-bottom: 16px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $color-regent;
+  color: $color-regent;
+  font-family: "remora-sans-w3";
+
+  &::placeholder {
+    color: $color-regent;
+  }
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.label {
+  color: $color-regent;
+}
+
+.light {
+  .formControl {
+    &::placeholder {
+      color: $color-waikawa;
+    }
+  }
+}
+
+@include breakpoint-min(sm) {
+  .form {
+    margin-top: 100px;
+    row-gap: 23px;
+  }
+
+  .formControl {
+    font-size: 14px;
+  }
+
+  .form-line {
+    row-gap: 23px;
+    column-gap: 23px;
+    &-expend {
+      row-gap: 23px;
+      column-gap: 23px;
+    }
+  }
+}
+
+@include breakpoint-min(md) {
+
+  .form {
+    row-gap: 32px;
+    margin-top: 130px;
+    margin-bottom: 70px;
+  }
+
+  .form-line-expend {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .formControl {
+    font-size: 13px;
+  }
+
+  .form-line {
+    row-gap: 32px;
+    column-gap: 32px;
+    &-expend {
+      row-gap: 32px;
+      column-gap: 32px;
+    }
+  }
+}
+
+@include breakpoint-min(lg) {
+  .form {
+    margin-bottom: 50px;
+  }
+
+  .form-line-expend {
+    justify-content: center;
+  }
+
+  .checkboxWrapper {
+    margin-right: 16px;
+  }
+}
+
+@include breakpoint-min(xl) {
+  .form-line {
+    row-gap: 24px;
+    column-gap: 24px;
+    &-expend {
+      row-gap: 24px;
+      column-gap: 24px;
+      justify-content: space-between;
+    }
+  }
+}
