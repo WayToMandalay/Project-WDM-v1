@@ -180,8 +180,8 @@ body {
     height: 80px;
     z-index: 15;
     background-size: cover;
-    background-image: url('/image/owl.png');
-    background-image: url('/image/owl.webp');
+    background-image: url('/Project-WDM-v1/image/owl.png');
+    background-image: url('/Project-WDM-v1/image/owl.webp');
     transition: right 0.4s ease;
 
     &.show {
@@ -229,7 +229,7 @@ body {
             left: 75px;
             width: 60px;
             height: 50px;
-            background-image: url('/brow-left.png');
+            background-image: url('/elements/owl-xl/brow-left.png');
             z-index: 20;
           }
           .eyeBrowRight {
@@ -239,7 +239,7 @@ body {
             left: 143px;
             width: 60px;
             height: 50px;
-            background-image: url('/brow-right.png');
+            background-image: url('/elements/owl-xl/brow-right.png');
             z-index: 20;
           }
           .eyeLeft {
@@ -250,7 +250,7 @@ body {
             top: 33px;
             width: 25px;
             height: 25px;
-            background-image: url('/eye-left.png');
+            background-image: url('/elements/owl-xl/eye-left.png');
             z-index: 10;
             border-radius: 50%;
           }
@@ -273,7 +273,7 @@ body {
             top: 33px;
             width: 24px;
             height: 25px;
-            background-image: url('/eye-right.png');
+            background-image: url('/elements/owl-xl/eye-right.png');
             z-index: 10;
           }
           .rightLid {
@@ -358,10 +358,10 @@ body {
         background-image: url('/image/owl-xl-day.png');
         
         .main__ownWindow-wrapper-inner-owl-eyeLeft {
-          background-image: url('/eye-left-day.png');
+          background-image: url('/elements/owl-xl/eye-left-day.png');
         }
         .main__ownWindow-wrapper-inner-owl-eyeRight {
-          background-image: url('/eye-right-day.png');
+          background-image: url('/elements/owl-xl/eye-right-day.png');
         }
 
         &-inner {
