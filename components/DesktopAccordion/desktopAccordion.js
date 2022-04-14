@@ -35,7 +35,7 @@ const DesktopAccordion = ({ items, activeItem, setActiveItem }) => {
                 <div className="desktopAccordion__item__content">
                     <div className="desktopAccordion__item-icon">
                         <img
-                            src={`/icons/carouselMobile/${el.icon}`}
+                            src={`/Project-WDM-v1/icons/carouselMobile/${el.icon}`}
                             alt="icon"
                         />
                     </div>

@@ -105,7 +105,7 @@ const MobileCarousel = ({
                         className={`mobileCarousel-item__icon ${el.iconClass}`}
                     >
                         <img
-                            src={`/icons/carouselMobile/${el.icon}`}
+                            src={`/Project-WDM-v1/icons/carouselMobile/${el.icon}`}
                             alt="icon"
                         />
                     </div>
