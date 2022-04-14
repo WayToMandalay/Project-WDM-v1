@@ -36,7 +36,7 @@
     color: $color-waikawa;
   }
   .main__title .underline-sm::after {
-    background-image: url('/elements/title-underline-sm-day.svg');
+    background-image: url('/Project-WDM-v1/elements/title-underline-sm-day.svg');
   }
 }
 @include breakpoint-min(xs) {
@@ -114,7 +114,7 @@
         width: 60px;
         height: 24px;
         position: absolute;
-        background-image: url('/elements/title-underline-sm.svg');
+        background-image: url('/Project-WDM-v1/elements/title-underline-sm.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;

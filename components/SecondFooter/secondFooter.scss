@@ -15,14 +15,14 @@
     transform: rotate(0deg);
     transform-origin: center;
     transition: transform 1.4s ease;
-    background-image: url('/elements/roller2.svg');
+    background-image: url('/Project-WDM-v1/elements/roller2.svg');
   }
 }
 
 .light {
   .secondFooter {
     &__rollerBlock {
-      background-image: url('/elements/roller2-day.svg');
+      background-image: url('/Project-WDM-v1/elements/roller2-day.svg');
     }
   }
 }

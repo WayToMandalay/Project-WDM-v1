@@ -13,7 +13,7 @@
     width: 288px;
     height: 39px;
     margin-bottom: 16px;
-    background-image: url('/image/formSent/formSent_320.png');
+    background-image: url('/Project-WDM-v1/image/formSent/formSent_320.png');
   }
 
   &-content {
@@ -33,7 +33,7 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  background-image: url('/image/theGuy.png');
+  background-image: url('/Project-WDM-v1/image/theGuy.png');
   transition: bottom $transition;
 
   &.showGuy {
@@ -48,7 +48,7 @@
   }
 
   .formSent-title {
-    background-image: url('/image/formSent/formSent_320-day.png');
+    background-image: url('/Project-WDM-v1/image/formSent/formSent_320-day.png');
   }
 }
 

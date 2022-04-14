@@ -69,8 +69,8 @@ body {
         position: absolute;
         width: 44px;
         height: 29px;
-        background-image: url('/decor/mainTitle-circle.png');
-        background-image: url('/decor/mainTitle-circle.webp');
+        background-image: url('/Project-WDM-v1/decor/mainTitle-circle.png');
+        background-image: url('/Project-WDM-v1/decor/mainTitle-circle.webp');
         top: 50%;
         left: 50%;
         transform: translate(-50%, -42%);
@@ -82,8 +82,8 @@ body {
         @include breakpoint-min(md) {
           width: 88px;
           height: 62px;
-          background-image: url('/decor/mainTitle-circle-lg.png');
-          background-image: url('/decor/mainTitle-circle-lg.webp');
+          background-image: url('/Project-WDM-v1/decor/mainTitle-circle-lg.png');
+          background-image: url('/Project-WDM-v1/decor/mainTitle-circle-lg.webp');
           transform: translate(-50%, -45%);
         }
       }
@@ -107,8 +107,8 @@ body {
     width: 251px;
     height: 38px;
     background-size: contain;
-    background-image: url('/image/bring-sales.png');
-    background-image: url('/image/bring-sales.webp');
+    background-image: url('/Project-WDM-v1/image/bring-sales.png');
+    background-image: url('/Project-WDM-v1/image/bring-sales.webp');
     font-size: 28px;
     text-transform: uppercase;
     font-weight: 600;
@@ -168,7 +168,7 @@ body {
     display: block;
     width: 133px;
     height: 90px;
-    background-image: url('/image/swiper-pointer-sm.svg');
+    background-image: url('/Project-WDM-v1/image/swiper-pointer-sm.svg');
   }
 
   &__own-wrapper {
@@ -200,7 +200,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
-    background-image: url('/image/window.png');
+    background-image: url('/Project-WDM-v1/image/window.png');
     
     &-inner {
       position: relative;
@@ -213,7 +213,7 @@ body {
         position: absolute;
         width: 272px;
         height: 219px;
-        background-image: url('/image/owl-xl-test.png');
+        background-image: url('/Project-WDM-v1/image/owl-xl-test.png');
         bottom: 25px;
         left: 20px;
 
@@ -229,7 +229,7 @@ body {
             left: 75px;
             width: 60px;
             height: 50px;
-            background-image: url('/elements/owl-xl/brow-left.png');
+            background-image: url('/Project-WDM-v1/elements/owl-xl/brow-left.png');
             z-index: 20;
           }
           .eyeBrowRight {
@@ -239,7 +239,7 @@ body {
             left: 143px;
             width: 60px;
             height: 50px;
-            background-image: url('/elements/owl-xl/brow-right.png');
+            background-image: url('/Project-WDM-v1/elements/owl-xl/brow-right.png');
             z-index: 20;
           }
           .eyeLeft {
@@ -250,7 +250,7 @@ body {
             top: 33px;
             width: 25px;
             height: 25px;
-            background-image: url('/elements/owl-xl/eye-left.png');
+            background-image: url('/Project-WDM-v1/elements/owl-xl/eye-left.png');
             z-index: 10;
             border-radius: 50%;
           }
@@ -273,7 +273,7 @@ body {
             top: 33px;
             width: 24px;
             height: 25px;
-            background-image: url('/elements/owl-xl/eye-right.png');
+            background-image: url('/Project-WDM-v1/elements/owl-xl/eye-right.png');
             z-index: 10;
           }
           .rightLid {
@@ -326,42 +326,41 @@ body {
       }
       .circle {
         &:before {
-          background-image: url('/decor/mainTitle-circle-day.png');
-          background-image: url('/decor/mainTitle-circle-day.webp');
+          background-image: url('/Project-WDM-v1/decor/mainTitle-circle-day.png');
+          background-image: url('/Project-WDM-v1/decor/mainTitle-circle-day.webp');
 
           @include breakpoint-min(md) {
-            background-image: url('/decor/mainTitle-circle-lg-day.png');
-            background-image: url('/decor/mainTitle-circle-lg-day.webp');
+            background-image: url('/Project-WDM-v1/decor/mainTitle-circle-lg-day.png');
+            background-image: url('/Project-WDM-v1/decor/mainTitle-circle-lg-day.webp');
           }
         }
       }
     }
 
     &__start-swiping {
-      background-image: url('/image/bring-sales-day.png');
-      background-image: url('/image/bring-sales-day.webp');
+      background-image: url('/Project-WDM-v1/image/bring-sales-day.png');
+      background-image: url('/Project-WDM-v1/image/bring-sales-day.webp');
     }
 
     &__swiper-pointer {
-      background-image: url('/image/swiper-pointer-sm-day.svg');
+      background-image: url('/Project-WDM-v1/image/swiper-pointer-sm-day.svg');
     }
 
     &__own-wrapper {
-      background-image: url('/image/owl-day.png');
-      background-image: url('/image/owl-day.webp');
+      background-image: url('/Project-WDM-v1/image/owl-day.png');
+      background-image: url('/Project-WDM-v1/image/owl-day.webp');
     }
     &__ownWindow-wrapper {
-      background-image: url('/image/window-day.png');
-      //background-image: url('/image/window-day.webp');
+      background-image: url('/Project-WDM-v1/image/window-day.png');
 
       &-inner-owl {
-        background-image: url('/image/owl-xl-day.png');
+        background-image: url('/Project-WDM-v1/image/owl-xl-day.png');
         
         .main__ownWindow-wrapper-inner-owl-eyeLeft {
-          background-image: url('/elements/owl-xl/eye-left-day.png');
+          background-image: url('/Project-WDM-v1/elements/owl-xl/eye-left-day.png');
         }
         .main__ownWindow-wrapper-inner-owl-eyeRight {
-          background-image: url('/elements/owl-xl/eye-right-day.png');
+          background-image: url('/Project-WDM-v1/elements/owl-xl/eye-right-day.png');
         }
 
         &-inner {

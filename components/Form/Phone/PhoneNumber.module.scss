@@ -92,7 +92,7 @@
     content: '';
     width: 16px;
     height: 16px;
-    background-image: url('/elements/arrow-form.svg');
+    background-image: url('/Project-WDM-v1/elements/arrow-form.svg');
     transition: transform 0.2s ease;
   }
 }
@@ -103,7 +103,7 @@
     color: $color-waikawa;
   }
   &:after {
-    background-image: url('/elements/arrow-form-day.svg');
+    background-image: url('/Project-WDM-v1/elements/arrow-form-day.svg');
   }
 }
 

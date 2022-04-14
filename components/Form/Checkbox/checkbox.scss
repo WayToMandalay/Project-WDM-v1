@@ -19,14 +19,14 @@
   background-size: cover;
   width: 22px;
   height: 22px;
-  background-image: url("/elements/checkbox.svg");
+  background-image: url("/Project-WDM-v1/elements/checkbox.svg");
 }
 
 .checkboxValueChecked {
   @extend %bg;
   width: 22px;
   height: 22px;
-  background-image: url("/elements/checkbox_checked.svg");
+  background-image: url("/Project-WDM-v1/elements/checkbox_checked.svg");
 }
 
 .checkboxLabel {
@@ -81,11 +81,11 @@
 
 .light {
   .checkboxValue {
-    background-image: url("/elements/checkbox-day.svg");
+    background-image: url("/Project-WDM-v1/elements/checkbox-day.svg");
   }
 
   .checkboxValueChecked {
-    background-image: url("/elements/checkbox_checked-day.svg");
+    background-image: url("/Project-WDM-v1/elements/checkbox_checked-day.svg");
   }
 
   .checkboxLabel {

@@ -46,38 +46,38 @@
         opacity: 0.5;
 
         &.home-icon {
-          background-image: url('/icons/footer/home-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/home-active.svg');
         }
 
         &.how_it_works-icon {
-          background-image: url('/icons/footer/how-it-works-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/how-it-works-active.svg');
         }
 
         &.results-icon {
-          background-image: url('/icons/footer/results-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/results-active.svg');
         }
 
         &.portfolio-icon {
-          background-image: url('/icons/footer/portfolio-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/portfolio-active.svg');
         }
 
         &.about-icon {
-          background-image: url('/icons/footer/about-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/about-active.svg');
         }
 
         &.contact-icon {
-          background-image: url('/icons/footer/contact-active.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/contact-active.svg');
         }
 
         &.day-night-m {
           width: 64px;
           height: 32px;
           background-size: cover;
-          background-image: url('/icons/footer/day-night-m.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/day-night-m.svg');
         }
 
         &.day-night-m-day {
-          background-image: url('/icons/footer/day-night-m-day.svg');
+          background-image: url('/Project-WDM-v1/icons/footer/day-night-m-day.svg');
         }
       }
 
@@ -112,7 +112,7 @@
       height: 20px;
 
       @extend %bg;
-      background-image: url('/logo/google-partner.svg');
+      background-image: url('/Project-WDM-v1/logo/google-partner.svg');
     }
 
     &__copyright {
@@ -136,7 +136,7 @@
 
     &-inner-bottom {
       &__partner {
-        background-image: url('/logo/google-partner_day.svg');
+        background-image: url('/Project-WDM-v1/logo/google-partner_day.svg');
       }
     }
   }
@@ -146,27 +146,27 @@
     &-icon {
 
       &.home-icon {
-        background-image: url('/icons/footer/home-day-active.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/home-day-active.svg');
       }
 
       &.results-icon {
-        background-image: url('/icons/footer/results-active-day.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/results-active-day.svg');
       }
 
       &.how_it_works-icon {
-        background-image: url('/icons/footer/how-it-works-active-day.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/how-it-works-active-day.svg');
       }
 
       &.portfolio-icon {
-        background-image: url('/icons/footer/portfolio-day-active.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/portfolio-day-active.svg');
       }
 
       &.about-icon {
-        background-image: url('/icons/footer/about-day-active.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/about-day-active.svg');
       }
 
       &.contact-icon {
-        background-image: url('/icons/footer/contact-day-active.svg');
+        background-image: url('/Project-WDM-v1/icons/footer/contact-day-active.svg');
       }
     }
 

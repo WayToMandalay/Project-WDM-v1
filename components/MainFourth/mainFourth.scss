@@ -25,7 +25,7 @@
     background-size: cover;
     width: 138px;
     height: 35px;
-    background-image: url('/image/doubling.png');
+    background-image: url('/Project-WDM-v1/image/doubling.png');
   }
 
   &__keepSwiping {
@@ -58,7 +58,7 @@
       content: '';
       width: 45px;
       height: 56px;
-      background-image: url('/elements/arrow_heart.svg');
+      background-image: url('/Project-WDM-v1/elements/arrow_heart.svg');
       bottom: -40px;
       left: 50%;
       transform: translateX(-50%);
@@ -89,12 +89,12 @@
   .mainFourth__keepSwiping {
 
     &::after {
-      background-image: url('/elements/arrow_heart-day.svg');
+      background-image: url('/Project-WDM-v1/elements/arrow_heart-day.svg');
     }
   }
 
   .mainFourth-doubling {
-    background-image: url('/image/doubling-day.png');
+    background-image: url('/Project-WDM-v1/image/doubling-day.png');
   }
 
 }

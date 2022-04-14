@@ -15,7 +15,7 @@
     width: 80px;
     height: 40px;
     cursor: pointer;
-    background-image: url('/logo/logo.svg');
+    background-image: url('/Project-WDM-v1/logo/logo.svg');
 
     img {
       width: 100%;
@@ -90,7 +90,7 @@
         top: 0px;
         left: -5px;
         background-size: cover;
-        background-image: url("/buttons/small/after.svg");
+        background-image: url("/Project-WDM-v1/buttons/small/after.svg");
       }
     }
   }
@@ -98,7 +98,7 @@
   &__day-night {
     @extend %btn;
 
-    background-image: url("/icons/footer/day-night-m-day.svg");
+    background-image: url("/Project-WDM-v1/icons/footer/day-night-m-day.svg");
     width: 60px;
     height: 30px;
     background-color: transparent;
@@ -110,7 +110,7 @@
     }
 
     &.header__day-day {
-      background-image: url("/icons/footer/day-night-m.svg");
+      background-image: url("/Project-WDM-v1/icons/footer/day-night-m.svg");
     }
   }
 
@@ -122,18 +122,18 @@
     height: 20px;
 
     @extend %bg;
-    background-image: url('/logo/google-partner.svg');
+    background-image: url('/Project-WDM-v1/logo/google-partner.svg');
   }
 }
 
 .light {
 
   .header__logo {
-    background-image: url('/logo/logo_day.svg');
+    background-image: url('/Project-WDM-v1/logo/logo_day.svg');
   }
 
   .header__partner {
-    background-image: url('/logo/google-partner_day.svg');
+    background-image: url('/Project-WDM-v1/logo/google-partner_day.svg');
   }
 
   .header-btn-s {
@@ -147,7 +147,7 @@
     &-wrapper {
 
       &::before {
-        background-image: url("/buttons/small/after-day.svg");
+        background-image: url("/Project-WDM-v1/buttons/small/after-day.svg");
       }
     }
   }
